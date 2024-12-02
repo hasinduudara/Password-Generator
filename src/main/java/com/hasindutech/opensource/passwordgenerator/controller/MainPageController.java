@@ -31,7 +31,7 @@ public class MainPageController {
     @FXML
     public void initialize() {
         pbar.setProgress(0.0);
-        pbar.getStylesheets().add("style/Style.css");
+        pbar.getStylesheets().add(getClass().getResource("/style/Style.css").toExternalForm());
     }
 
     @FXML

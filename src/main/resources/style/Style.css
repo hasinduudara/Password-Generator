@@ -4,6 +4,6 @@
 }
 
 .progress-bar .bar {
-    -fx-background-color: linear-gradient(to right, #00ff00, #0000ff); /* Gradient effect */
-    -fx-effect: dropshadow(gaussian, rgba(0, 255, 0, 0.5), 10, 0.5, 0, 0); /* Glow effect */
+    -fx-background-color: linear-gradient(to right, #003577,#005eff ); /* Gradient effect */
+    -fx-effect: dropshadow(gaussian, rgb(0, 198, 255), 10, 0.5, 0, 0); /* Glow effect */
 }
