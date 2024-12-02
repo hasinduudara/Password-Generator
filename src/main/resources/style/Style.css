@@ -1,0 +1,9 @@
+/* style.css */
+.progress-bar .track {
+    -fx-background-color: lightgray; /* Background of the progress bar */
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #00ff00, #0000ff); /* Gradient effect */
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 0, 0.5), 10, 0.5, 0, 0); /* Glow effect */
+}

@@ -29,6 +29,12 @@ public class MainPageController {
     private ProgressBar pbar;
 
     @FXML
+    public void initialize() {
+        pbar.setProgress(0.0);
+        pbar.getStylesheets().add("style/Style.css");
+    }
+
+    @FXML
     void btnGeneratePasswordOnAction(ActionEvent event) {
         pbar.setProgress(0);
         Timeline timeline = new Timeline();
@@ -46,12 +52,21 @@ public class MainPageController {
     }
 
     private String generatePassword(int length) {
-        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#&";
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        String specialChars = "@#&";
         SecureRandom random = new SecureRandom();
         StringBuilder password = new StringBuilder(length);
-        for (int i = 0; i < length; i++) {
+        password.append(specialChars.charAt(random.nextInt(specialChars.length())));
+        for (int i = 1; i < length; i++) {
             password.append(chars.charAt(random.nextInt(chars.length())));
         }
+        for (int i = 0; i < password.length(); i++) {
+            int randomIndex = random.nextInt(password.length());
+            char temp = password.charAt(i);
+            password.setCharAt(i, password.charAt(randomIndex));
+            password.setCharAt(randomIndex, temp);
+        }
+
         return password.toString();
     }
 
