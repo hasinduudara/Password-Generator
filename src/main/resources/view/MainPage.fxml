@@ -18,7 +18,11 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Label fx:id="lblPassword" alignment="CENTER" layoutX="216.0" layoutY="257.0" prefHeight="66.0" prefWidth="467.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30; -fx-border-color: #000000; -fx-border-radius: 30;" />
+      <Label fx:id="lblPassword" alignment="CENTER" layoutX="216.0" layoutY="257.0" prefHeight="66.0" prefWidth="467.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30; -fx-border-color: #000000; -fx-border-radius: 30;">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
       <Button fx:id="btnCopyPassword" layoutX="346.0" layoutY="362.0" mnemonicParsing="false" onAction="#btnCopyPasswordOnAction" prefHeight="42.0" prefWidth="207.0" style="-fx-background-color: #8f00ff; -fx-background-radius: 30; -fx-border-color: #000000; -fx-border-radius: 30;" text="Coppy Password" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
